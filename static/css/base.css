@@ -1,0 +1,511 @@
+ /*
+ * # For Semantic UI Framework
+ * Author : QR
+ *
+ */
+@media (max-width: 767px) {
+	.hidden-xs, .visible-sm, .visible-md ,.visible-lg{
+		display: none !important;
+	}  
+	.visible-xs {
+		display: block !important;
+	}
+	.right_modify{
+		margin-left:0px !important;
+		width:100%;
+		height: calc(100% - 90px);
+	}
+	#contentSpace{
+		height: 100%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.hidden-sm, .visible-xs, .visible-md, .visible-lg{
+		display: none !important;
+	}
+	.visible-sm {
+		display: block !important;
+	}
+	.right_modify{
+		margin-left:220px !important;
+		width:calc(100% - 220px);
+		height: 100%;
+	}
+	#contentSpace{
+		height: calc(100% - 45px);
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.hidden-md, .visible-xs, .visible-sm, .visible-lg{
+		display: none !important;
+	}
+	.visible-md {
+		display: block !important;
+	}
+	.right_modify{
+		margin-left:220px !important;
+		width:calc(100% - 220px);
+		height: 100%;
+	}
+	#contentSpace{
+		height: calc(100% - 45px);
+	}
+}
+@media (min-width: 1200px) {
+	.hidden-lg, .visible-xs, .visible-sm, .visible-md  {
+		display: none !important;
+	}
+	.visible-lg {
+		display: block !important;
+	}
+	.right_modify{
+		margin-left:220px !important;
+		width:calc(100% - 220px);
+		height: 100%;
+	}
+	#contentSpace{
+		height: calc(100% - 45px);
+	}
+}
+html{
+	overflow-y: hidden;
+}
+
+body .pusher{
+	height:100%;
+}
+
+#naviLeft{
+    width: 220px !important;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    margin: 0 !important;
+	border-radius:0 !important;
+	float:left;
+	overflow-y: auto;
+}
+#naviTop{
+	box-shadow:none !important;
+}
+
+.right_modify.fullScreen{
+	margin-left:0px !important;
+	width:100%;
+}
+
+#breadSpace{
+	padding: 12.1px 20px;
+	border-bottom: 1px solid rgba(34,36,38,.15);
+	background: #f3f3f3;
+}
+#content{
+	height:100%;
+	padding:10px !important;
+	overflow-y: auto;
+	//overflow-x: hidden;
+}
+#user{
+	position:absolute;
+	right:3px;
+	padding:5px;
+	z-index: 1000;
+}
+.ui_modify.ui.dropdown .menu .menu{
+	margin-left:0 !important;
+}
+.ui_modify .ui.menu .dropdown.item .menu{
+	min-width:0 !important;
+}
+.ui_modify .menu i{
+	margin-right:-1em !important;
+}
+
+#loading{
+	padding: 0px;
+	margin: 0px !important;
+}
+#loading .ui.active.dimmer{
+	opacity: 0.3;
+}
+/*-----------------table--------------------*/
+
+.autopadding .column{
+	padding: 0px !important;
+}
+.autopadding{
+	//margin-bottom:5px;
+	//margin-top:5px;
+	margin:5px 0px !important;
+}
+table.dataTable.table td:first-child, table.dataTable.table th:first-child {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.dataTables_filter  input{
+	font-size:.85714286rem;
+}
+
+.ui.table td, .ui.table th{
+    padding: .4em .6em !important;
+}
+.ui.table  thead  tr th, .ui.table  tfooter tr th{
+	background-color:#f1f1f1;	
+}
+.ui.table {
+    font-size: 0.89em;
+}
+table.dataTable.table thead th.sorting::after, table.dataTable.table thead th.sorting_asc::after, table.dataTable.table thead th.sorting_desc::after, table.dataTable.table thead td.sorting::after, table.dataTable.table thead td.sorting_asc::after, table.dataTable.table thead td.sorting_desc::after {
+    top: 5px !important;
+	font-size: 1.1em;
+}
+button.dtdetail{
+	padding: 5px 10px !important;
+}
+/*-----------------table--------------------*/
+
+
+/*-----------------display--------------------*/
+input.hidden{
+	display:none;	
+}
+
+input.visible{
+	display:block;
+}
+
+.button.hidden{
+	display:none;	
+}
+
+/* .button.visible{
+	display:block;
+} */
+.tab_hidden{
+	display:none !important;
+}
+/*-----------------display--------------------*/
+
+
+
+/*-----------------list-checkbox--------------------*/
+
+.ui.list .list > .item > .checkbox, .ui.list > .item > .checkbox{
+    display: table-cell;
+    margin: 0;
+    padding-top: 0;
+    vertical-align: top;
+    -webkit-transition: color .1s ease;
+    transition: color .1s ease;
+}
+
+/*-----------------list-checkbox--------------------*/
+
+
+
+
+/*-----------------redtheme-setting--------------------*/
+.redtheme .ui.black.button, .redtheme  .ui.black.buttons .button {
+	background-color:red;
+}
+
+
+/*-----------------redtheme-setting--------------------*/
+
+
+
+
+/*-----------------imgtheme-setting--------------------*/
+
+body.imgtheme  {
+	color:#34587B;
+}
+
+.imgtheme .ui.inverted.menu {
+	background:-moz-linear-gradient(left, rgba(0, 4, 8, 0.65), rgba(49, 142, 186, 0.27)), url("/static/image/menubg1.jpg") no-repeat 100% 100%;
+}
+
+.imgtheme .ui.black.button, .imgtheme  .ui.black.buttons .button {
+	background-color:#34587B;
+}
+.imgtheme .ui.black.button:hover, .imgtheme .ui.black.buttons .button:hover {
+    background-color: #316699;
+    color: #FFF;
+    text-shadow: none;
+}
+
+.imgtheme .ui.list .list > .item .header, .imgtheme .ui.list > .item .header{
+	color:#34587B;
+}
+
+.imgtheme  .ui.modal > .header {
+	color:#34587B;
+}
+
+/*-----------------imgtheme-setting--------------------*/
+
+
+/*-----------------bluetheme-setting--------------------*/
+
+body.bluetheme  {
+	color:#34587B;
+}
+
+.bluetheme .ui.inverted.menu {
+    background: #34587B;
+}
+
+.bluetheme .ui.black.button, .bluetheme  .ui.black.buttons .button {
+	background-color:#34587B;
+}
+.bluetheme .ui.black.button:hover, .bluetheme .ui.black.buttons .button:hover {
+    background-color: #316699;
+    color: #FFF;
+    text-shadow: none;
+}
+
+.bluetheme .ui.list .list > .item .header, .bluetheme .ui.list > .item .header{
+	color:#34587B;
+}
+
+.bluetheme  .ui.modal > .header {
+	color:#34587B;
+}
+
+
+/*-----------------bluetheme-setting--------------------*/
+
+.ui.ordered.steps .step.disabled:before,.ui.steps .step.disabled>.icon:before
+{color:#F51212;content:'\f00d'}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+/*----------------right sidebar of map----------------------*/
+#sidepage{
+	background-color:white;
+	margin:10px 0 !important;
+	height: calc(100% - 20px) !important;
+}
+
+#sidepage .ui.card{
+	width: 100%;
+	height: 100%;
+}
+
+#sidepage #cardcontent{
+	height: calc(100% - 45px);
+	overflow-y: auto;
+}
+
+/*----------------datatable response-------------------------*/
+th.details-control{
+	padding:0 3px 0 0 !important;
+}
+td.details-control::before {
+    cursor: pointer;
+	height: 16px;
+	width: 16px;
+	display: block;
+	//position: absolute;
+	//left:15px;
+	color: white;
+	border: 2px solid white;
+	border-radius: 16px;
+	box-shadow: 0 0 3px #444;
+	box-sizing: content-box;
+	text-align: left;
+	font-family: 'Courier New', Courier, monospace;
+	text-indent: 4px;
+	line-height: 16px;
+	content: '+';
+	background-color: #337ab7;
+}
+tr.shown td.details-control::before {
+    content: '-';
+	background-color: #d33333;
+}
+.detailTable td{
+	padding:5px 10px;
+	border: 1px solid #ddd;
+	
+}
+.detailTable table{
+	width:100%;
+	border: 1px solid #ddd;
+}
+
+/*----------------toggle button for navi ---------------------*/
+.hideNavi{
+	position: absolute;
+	right: 0px;
+	top: 4px;
+}
+.showNavi{
+	margin-left: -35px !important;
+}
+.showNavi:hover{
+	margin-left: 0px !important;
+}
+div#naviHide{
+	display:none;
+	position:absolute;
+	top: 4px;
+}
+
+.fullScreen_content{
+    width: 100%;
+    margin-left: 0px !important;
+}
+.fullScreen_bread{
+	width: 100%;
+    margin-left: 5px !important;
+}
+
+.zeropadding{
+	padding: 0px !important;
+}
+/*----------------button shaking------------------------------*/
+.myshake {
+	display: inline-block;
+	transform-origin: center center; 
+	animation-name: myshake;
+	animation-duration: 4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes myshake {
+  1% {
+    transform: translate(0px, 0) rotate(0); }
+  2% {
+    transform: translate(4px, 0) rotate(-10deg); }
+  3% {
+    transform: translate(-5px, 0) rotate(13deg); }
+  4% {
+    transform: translate(8px, 0) rotate(-20deg); }
+  5% {
+    transform: translate(3px, 0) rotate(-7deg); }
+  6% {
+    transform: translate(4px, 0) rotate(-10deg); }
+  7% {
+    transform: translate(-6px, 0) rotate(15deg); }
+  8% {
+    transform: translate(9px, 0) rotate(-23deg); }
+  9% {
+    transform: translate(-6px, 0) rotate(15deg); }
+  10% {
+    transform: translate(6px, 0) rotate(-15deg); }
+  11% {
+    transform: translate(9px, 0) rotate(-23deg); }
+  12% {
+    transform: translate(0px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); }
+}
+
+.template{
+	display:none !important;
+}
+
+
+/*----------------click waterdrop style------------------------------*/
+.menu a{
+	overflow:hidden;
+}
+.ripple {
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.4);
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	position: absolute;
+	opacity: 1;
+}
+ 
+.rippleEffect {
+	-webkit-animation: rippleDrop .4s linear;
+	animation: rippleDrop .4s linear;
+}
+ 
+@-webkit-keyframes 
+  rippleDrop {  100% {
+	-webkit-transform: scale(2);
+	transform: scale(2);
+	opacity: 0;
+  }
+}
+@keyframes 
+  rippleDrop {  100% {
+	-webkit-transform: scale(2);
+	transform: scale(2);
+	opacity: 0;
+  }
+}   
+
+label.upfile{
+	cursor: pointer;
+}
+
+code {
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 0.875em;
+  font-weight: bold;
+  padding: 1px 6px;
+  vertical-align: baseline;
+  margin: 1px 3px;
+}
+.ui.card > .content:first-child{
+	background: whitesmoke;
+}
+
+#pictureModal .content{
+	height: 500px !important;
+}
+#pictureModal img{
+	max-height: 450px !important;
+	max-width: 850px !important;
+}
+
+/*----------------file input style------------------------------*/
+.ui.input.file{
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    color: #1E88C7;
+}
+.ui.input.file:hover{
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+}
+.ui.input.file input{
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+/*----------------file input style------------------------------*/
+
+#bulkInput .segment {
+    max-height: 300px;
+    overflow-y: auto;
+}
+#bulkInput .label {
+    margin-top: .5em;
+}
+.bulk{
+	cursor:pointer;
+}

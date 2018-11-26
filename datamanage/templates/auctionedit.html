@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+<!-- {% block navi_left %} {{ left }} {% endblock %}
+{% block navi_top %} {{ top }} {% endblock %} -->
+<!-- {% block username %} Admin {% endblock %} -->
+
+{% block title %}
+{% ifequal op "add" %}新建{% else %}编辑{% endifequal %}物品信息
+{% endblock %}
+
+{% block extraJS %}
+
+        seajs.use(['auctionEdit'], function() {
+                });
+
+{% endblock %}
+
+{% block extraCSS %}
+.myform input, .myform textarea, .myform .dropdown, .myform .dropdown .item{
+        font-size: .85714286rem !important;
+}
+.myform h5{
+        margin-top: 1.5em !important;
+}
+.mylist{
+        margin-bottom: 5px !important;
+}
+.mylist input{
+        width: 400px !important;
+}
+.mylist i{
+        vertical-align: middle !important;
+        cursor:pointer;
+}
+.additem{
+        cursor:pointer;
+}
+.structType .mylist input{
+        max-width:200px;
+}
+{% endblock %} 
+
+{% block content %}
+
+<input type="hidden" id="is_superuser" value={{ request.user.is_superuser }} />
+<input type="hidden" id="op" value={{ op }} />
+<input type="hidden" id="id" value={{ id }} />
+<input type="hidden" id="data" value='{{ data }}' />
+<div style="width: 80%;margin: 10px auto;max-width: 1000px;">
+	<form class="ui form myform">
+		<div class="field">
+                <h5 class="ui header">序号</h5>
+                <input type="text" name="auctionid">
+        </div>
+        <div class="field">
+                <h5 class="ui header">名称</h5>
+                <input type="text" name="auctionname">
+        </div>
+        <div class="field">
+                <h5 class="ui header">价格</h5>
+                <input type="text" name="auctionprice">
+        </div>
+                                
+                                
+        <div class="field">
+                <h5 class="ui header">数量</h5>
+                <input type="text" name="auctionnum">
+        </div>
+                                
+        <div class="field">
+                <h5 class="ui header">描述</h5>
+                <input type="text" name="auctiondesc">
+        </div>
+                                
+		
+	</form>
+	<div class="ui button green submit basic" style="margin-top: 1em;">添加</div>
+</div>
+	
+        
+
+
+{% endblock %}

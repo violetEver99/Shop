@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+<!-- {% block navi_left %} {{ left }} {% endblock %}
+{% block navi_top %} {{ top }} {% endblock %} -->
+<!-- {% block username %} Admin {% endblock %} -->
+
+{% block title %}
+物品列表
+{% endblock %}
+
+{% block extraJS %}
+
+                seajs.use(['auction'], function() {
+                });
+
+{% endblock %}
+
+{% block extraCSS %}
+        .ui.items > .item .meta {
+                margin: 0 !important;
+        }
+        .myhidden{
+                display:none !important;
+        }
+        tr.selected{
+                background-color: #abababb3 !important;
+        }
+        .dataTables_scrollBody .ui.table th{
+                padding-top: 0px !important;
+                padding-bottom: 0px !important;
+        }
+        .dataTables_scrollHeadInner > table{
+                box-sizing:border-box;
+        }
+        #auctionDT{
+                min-width:1200px;
+                width:100%;
+        }
+{% endblock %} 
+
+{% block content %}
+<!-- 	<div class="ui pointing secondary menu">
+                <a class="active item" data-tab="general">概况信息</a>
+                <a class="item ui transition " data-tab="hardware">硬件信息</a>
+        </div>
+        <div class="ui active tab" data-tab="general">
+        </div>
+        <div class="ui tab" data-tab="hardware">
+                <table>
+                        
+                </table>
+        </div> -->
+
+        <table id="auctionDT" class="ui compact celled table" cellspacing="0" width="100%" style="">
+        </table>
+
+
+{% endblock %}
+{% block sidebar %}
+<div class="rightbar ui very wide sidebar inverted vertical right" style="background-color:white;">
+
+</div>
+{% endblock %} 

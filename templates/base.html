@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <script src="/static/js/sea.js"></script> 
+  <script src="/static/js/seajs-preload.js"></script> 
+  <script src="/static/js/seajs-css.js"></script>  
+  <link rel="stylesheet" type="text/css" class="ui" href="/static/css/semantic.min.css" />
+ <!--  <link rel="stylesheet" type="text/css" class="ui" href="/static/css/dataTables.semanticui.min.css" /> -->
+  <title>{% block title %}{% endblock %}</title>
+  <style type="text/css">
+    {% block extraCSS %}{% endblock %}
+  </style>
+ </head> 
+ <body class="{{request.user.userprofile.theme}} ">
+	
+	<div id="user">
+		
+		<button class="circular ui icon button tiny" data-position="bottom right" id="im" {% if not IM %}style="visibility: hidden;" {% endif %}>
+		  <i class="icon alarm outline"></i>
+		</button>
+		
+		<div class="ui inline dropdown top 	right pointing">
+			<div class="text"><i class="user icon"></i><span id="username">{{request.user.username}}</span></div>
+			<div class="menu inline">
+			  <div class="item" data-value="1"><i class="write icon"></i>修改密码</div>
+			  <div class="item" data-value="2"><i class="sign out icon"></i>退出</div>
+			</div>
+		</div>
+	</div>
+
+
+ <div class="pusher">
+	<div id="naviHide">
+		<button class="ui icon button black showNavi">
+		  <i class="icon angle double right"></i>
+		</button>
+	</div>
+	<div class="ui vertical inverted menu hidden-xs" id="naviLeft">
+
+		<div class="item"> 
+			<a class="ui logo icon image" href="/"> <!-- <img src="/static/image/logo.ico" style="width:30px"/> --> </a> 
+			<a href=""><b> &nbsp;GD2016-A</b></a> 
+			<button class="ui icon button inverted hideNavi" style="box-shadow: none !important;">
+			  <i class="icon angle double left"></i>
+			</button>
+		</div> 
+		<div class="item" style="display:none">
+			<div class="ui category search search_modify">
+				<div class="ui transparent icon input">
+					<input class="prompt" type="text" placeholder="Search here..." style="color:white">
+					<i class="search link icon" style="color:white"></i>
+				</div>
+				<div class="results"></div>
+			</div>
+
+		</div>
+		{% for mainmenu in contexts.menu %}
+			<div class="item">
+				<div class="header">
+				{{ mainmenu.name}}
+				</div> 
+				<div class="menu"> 
+				{% for submenu in mainmenu.children%}
+					
+					<a class="item {% ifequal submenu.name contexts.bread.1.name%}active{%endifequal %}" href="{{submenu.url}}">{{submenu.name}}</a> 
+				{% endfor %}
+				</div> 
+			</div> 
+		{% endfor %}
+
+	</div> 
+
+	<div class="top_modify visible-xs" id="naviTop">
+		<div class="ui menu">
+			<div class="ui simple vertical dropdown item ui_modify">
+				<i class="content icon"></i>
+				<div class="menu">
+				{% for mainmenu in contexts.menu %}
+					<div class="item">
+						<div class="header">
+						{{ mainmenu.name}}
+						</div> 
+						<div class="menu"> 
+						{% for submenu in mainmenu.children%}
+							<a class="item" href="{{submenu.url}}">{{submenu.name}}</a> 
+						{% endfor %}
+						</div> 
+					</div> 
+				{% endfor %}
+				</div>
+			</div>
+			
+			
+
+			
+		</div>
+	</div>
+	<div class="right_modify">
+		<div id="breadSpace">
+			<div class="ui breadcrumb">
+				{% for breaditem in contexts.bread%}
+					{% if forloop.first %} 				
+						<span class="section">
+							{{breaditem.name}}
+						</span>
+					{% elif forloop.last %}
+						<i class="right angle icon divider"></i>
+						<div class="section active">{{breaditem.name}}</div>
+					{% else %}
+						<i class="right angle icon divider"></i>
+						<a href="{{breaditem.url}}" class="section">{{breaditem.name}}</a>
+					{% endif %}
+				{% endfor%}
+			</div>
+		</div>
+		
+		<div id="contentSpace" >
+				
+			<div id="content">
+			{% block content %}{% endblock %}
+		
+			
+			</div>
+		</div>
+	</div>
+ </div>
+<div id="pictureModal" class="ui big modal newData" style="top:0px !important;">
+	<div class="header">aa</div>
+	<div class="content">
+		<img src="" alt="">
+	</div>   
+</div>
+
+<div id="changePass" class="ui small modal">
+	<div class="header">修改密码</div>
+	<div class="content">
+		<form class="ui form" >
+			<div class="inline fields">
+				<div class="three wide field">
+					<label>新密码</label>
+				</div>
+				<div class="thirteen wide field">
+					<input type="text" id="passwd1">
+				</div>
+			</div>
+			<div class="inline fields">
+				<div class="three wide field">
+					<label>确认</label>
+				</div>
+				<div class="thirteen wide field">
+					<input type="text" id="passwd2">
+				</div>
+			</div>
+			
+		</form>
+	</div>
+	<div class="actions">
+		<div class="ui approve green button">提交</div>
+		<div class="ui cancel button">取消</div>
+	</div>
+   
+</div>
+
+
+ {% block sidebar %}{% endblock %}
+
+ </body>
+ <script type="text/javascript">
+ 	seajs.config({
+		base:"/static/",
+		alias: {
+		  "jquery": "js/jquery.min.js",
+		  "semantic": "js/semantic.min.js",
+		  "datatables": "js/jquery.dataTables.min.js",
+		  "GMap": "js/GMapAPI/mapapi.js",
+		  "echarts": "js/echarts-all-3",
+		},
+		preload: ['css/base.css', "js/base"]
+	});
+
+
+	{% block extraJS %}{% endblock %}
+
+ </script>
+</html>

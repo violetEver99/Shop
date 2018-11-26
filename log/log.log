@@ -1,0 +1,852 @@
+[2018-05-22 08:39:57,715][views.py][getMenu][Line:170][DEBUG]:Traceback (most recent call last):
+  File "/home/huaan/webframework/framework/views.py", line 167, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-05-22 08:46:09,492][views.py][getMenu][Line:170][DEBUG]:Traceback (most recent call last):
+  File "/home/huaan/webframework/framework/views.py", line 167, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 11:58:00,286][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 11:58:00,823][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "e:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 11:58:00,823][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "e:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "e:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-19 11:58:26,335][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 11:58:26,736][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "e:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 11:58:26,736][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "e:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "e:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-19 12:00:21,275][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 12:00:21,279][views.py][dataView][Line:43][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 40, in dataView
+    return render(request, datatype + ".html",{"contexts":menucontexts,"request":request})
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: mission.html
+
+[2018-11-19 12:01:42,903][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:46:26,272][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:46:26,279][views.py][dataView][Line:43][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 40, in dataView
+    return render(request, datatype + ".html",{"contexts":menucontexts,"request":request})
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader_tags.py", line 151, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader_tags.py", line 141, in get_parent
+    raise TemplateSyntaxError(error_msg)
+TemplateSyntaxError: Invalid template name in 'extends' tag: ''. Got this from the 'base.hml' variable.
+
+[2018-11-19 13:46:28,066][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:46:28,069][views.py][dataView][Line:43][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 40, in dataView
+    return render(request, datatype + ".html",{"contexts":menucontexts,"request":request})
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader_tags.py", line 151, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader_tags.py", line 141, in get_parent
+    raise TemplateSyntaxError(error_msg)
+TemplateSyntaxError: Invalid template name in 'extends' tag: ''. Got this from the 'base.hml' variable.
+
+[2018-11-19 13:46:29,608][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:46:29,611][views.py][dataView][Line:43][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 40, in dataView
+    return render(request, datatype + ".html",{"contexts":menucontexts,"request":request})
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader_tags.py", line 151, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\template\loader_tags.py", line 141, in get_parent
+    raise TemplateSyntaxError(error_msg)
+TemplateSyntaxError: Invalid template name in 'extends' tag: ''. Got this from the 'base.hml' variable.
+
+[2018-11-19 13:48:50,950][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:48:59,957][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:49:07,252][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:50:28,183][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:50:29,726][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:54:00,921][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:54:01,601][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 13:57:54,392][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:01:16,520][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:01:22,321][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:01:23,759][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:10:17,420][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:10:17,420][views.py][dataView][Line:43][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 38, in dataView
+    menucontexts = getMenu(request)
+  File "e:\web\framework\views.py", line 142, in getMenu
+    print traceback.format_exc()
+IOError: [Errno 22] Invalid argument
+
+[2018-11-19 14:10:22,411][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:10:31,857][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:20:28,917][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:21:11,204][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 14:21:11,204][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "E:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-19 14:22:05,674][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:24:47,740][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:27:49,381][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:28:22,230][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:30:58,884][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-19 14:47:40,486][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 14:47:40,486][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "E:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-19 14:47:51,542][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 14:47:51,542][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "E:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-19 14:53:13,187][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 14:53:13,187][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "E:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-19 15:00:11,795][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 15:00:11,796][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "E:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-19 15:09:34,591][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 15:09:34,591][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "E:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-19 15:10:28,469][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 15:10:28,470][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "E:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-19 15:11:01,453][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 15:11:01,453][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "E:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-19 15:12:12,072][views.py][getUser][Line:174][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 167, in getUser
+    group = user.groups.all()[0]
+  File "C:\Python27\lib\site-packages\django-1.9.13-py2.7.egg\django\db\models\query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+
+[2018-11-19 15:12:12,072][views.py][userManage][Line:142][DEBUG]:Traceback (most recent call last):
+  File "E:\web\usermanage\views.py", line 138, in userManage
+    return (op == "add" and addUser(request)) or (op == "get" and getUser(request)) or (op == "edit" and editUser(request)) or (op == "del" and delUser(request))
+  File "E:\web\usermanage\views.py", line 176, in getUser
+    raise Http404
+Http404
+
+[2018-11-20 11:24:42,380][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-20 11:25:44,759][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-20 11:27:22,167][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-20 11:30:42,933][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-20 11:30:45,132][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-20 11:34:35,765][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-20 11:36:05,160][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "E:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 10:20:02,315][views.py][auctionManage][Line:1257][DEBUG]:Traceback (most recent call last):
+  File "E:\web\datamanage\views.py", line 1254, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and deleteAuction(request))
+NameError: global name 'getAuction' is not defined
+
+[2018-11-21 11:47:10,789][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 11:50:51,336][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 11:51:11,506][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 11:52:04,795][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 11:52:07,250][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 11:52:55,674][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 11:55:22,256][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:23:50,654][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:23:50,654][views.py][opDataView][Line:156][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 139, in opDataView
+    _id = request.GET("id")
+TypeError: 'QueryDict' object is not callable
+
+[2018-11-21 15:23:57,878][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:23:57,878][views.py][opDataView][Line:156][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 139, in opDataView
+    _id = request.GET("id")
+TypeError: 'QueryDict' object is not callable
+
+[2018-11-21 15:24:02,732][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:24:02,733][views.py][opDataView][Line:156][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 139, in opDataView
+    _id = request.GET("id")
+TypeError: 'QueryDict' object is not callable
+
+[2018-11-21 15:28:02,532][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:28:02,533][views.py][opDataView][Line:156][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 139, in opDataView
+    _id = request.GET("id")
+TypeError: 'QueryDict' object is not callable
+
+[2018-11-21 15:35:34,329][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:35:34,331][views.py][opDataView][Line:156][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 139, in opDataView
+    _id = request.GET("id")
+TypeError: 'QueryDict' object is not callable
+
+[2018-11-21 15:40:09,944][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:40:09,946][views.py][opDataView][Line:156][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 139, in opDataView
+    _id = request.GET("id")
+TypeError: 'QueryDict' object is not callable
+
+[2018-11-21 15:41:44,938][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:41:44,940][views.py][opDataView][Line:157][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 139, in opDataView
+    _id = request.GET("id")
+TypeError: 'QueryDict' object is not callable
+
+[2018-11-21 15:41:54,483][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:41:54,483][views.py][opDataView][Line:157][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 139, in opDataView
+    _id = request.GET("id")
+TypeError: 'QueryDict' object is not callable
+
+[2018-11-21 15:42:37,407][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:42:37,407][views.py][opDataView][Line:157][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 139, in opDataView
+    _id = request.GET("id")
+TypeError: 'QueryDict' object is not callable
+
+[2018-11-21 15:43:22,723][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 15:43:22,724][views.py][opDataView][Line:157][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 139, in opDataView
+    _id = request.GET("id")
+TypeError: 'QueryDict' object is not callable
+
+[2018-11-21 15:45:47,648][views.py][getMenu][Line:141][DEBUG]:Traceback (most recent call last):
+  File "e:\web\framework\views.py", line 138, in getMenu
+    retData = {"menu": appMenu, "bread":breadMenu}
+UnboundLocalError: local variable 'breadMenu' referenced before assignment
+
+[2018-11-21 16:13:10,440][views.py][opDataView][Line:146][ERROR]:cannot concatenate 'str' and 'QuerySet' objects
+[2018-11-21 16:15:48,503][views.py][opDataView][Line:146][ERROR]:cannot concatenate 'str' and 'QuerySet' objects
+[2018-11-21 16:16:24,153][views.py][opDataView][Line:146][ERROR]:cannot concatenate 'str' and 'QuerySet' objects
+[2018-11-21 16:18:20,273][views.py][opDataView][Line:146][ERROR]:cannot concatenate 'str' and 'QuerySet' objects
+[2018-11-21 16:47:35,460][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    data = dataJson["fields"]
+TypeError: list indices must be integers, not str
+
+[2018-11-21 16:47:46,135][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    data = dataJson["fields"]
+TypeError: list indices must be integers, not str
+
+[2018-11-21 16:47:47,980][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    data = dataJson["fields"]
+TypeError: list indices must be integers, not str
+
+[2018-11-21 16:48:17,665][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    data = dataJson["fields"]
+TypeError: list indices must be integers, not str
+
+[2018-11-21 16:48:19,944][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    data = dataJson["fields"]
+TypeError: list indices must be integers, not str
+
+[2018-11-21 16:49:36,510][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    data = dataJson["fields"]
+TypeError: list indices must be integers, not str
+
+[2018-11-21 16:49:55,861][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    data = dataJson["fields"]
+TypeError: list indices must be integers, not str
+
+[2018-11-21 16:50:10,648][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    data = dataJson["fields"]
+TypeError: list indices must be integers, not str
+
+[2018-11-21 16:50:14,095][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    data = dataJson["fields"]
+TypeError: list indices must be integers, not str
+
+[2018-11-21 16:55:51,042][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 149, in opDataView
+    dataJson = json.loads(serializers.serialize("json", _auction))[0]
+IndexError: list index out of range
+
+[2018-11-22 16:38:44,529][views.py][addAuction][Line:1304][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1284, in addAuction
+    _auction[key] =  json.loads(data["value"])
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-22 16:44:21,663][views.py][addAuction][Line:1304][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1282, in addAuction
+    data = json.loads(request.POST.get(key, None))
+  File "C:\Python27\lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+
+[2018-11-22 17:30:17,424][views.py][addAuction][Line:1304][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1284, in addAuction
+    _auction[key] =  json.loads(data["value"])
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:23:11,882][views.py][addAuction][Line:1304][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1284, in addAuction
+    _auction[key] =  json.loads(data["value"])
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:23:59,953][views.py][addAuction][Line:1304][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1286, in addAuction
+    _auction[key] = data["value"]
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:24:24,163][views.py][addAuction][Line:1305][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1287, in addAuction
+    _auction[key] = data["value"]
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:25:14,654][views.py][addAuction][Line:1306][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1288, in addAuction
+    _auction[key] = data["value"]
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:25:51,361][views.py][addAuction][Line:1306][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1283, in addAuction
+    data = json.loads(request.POST.get(key, None))
+  File "C:\Python27\lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+
+[2018-11-23 09:26:49,940][views.py][addAuction][Line:1307][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1284, in addAuction
+    data = json.loads(request.POST.get(key, None))
+  File "C:\Python27\lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+
+[2018-11-23 09:29:16,464][views.py][addAuction][Line:1307][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1289, in addAuction
+    _auction[key] = data[0]
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:30:10,012][views.py][addAuction][Line:1309][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1294, in addAuction
+    auctionname = _auction["auctionname"],
+KeyError: 'auctionname'
+
+[2018-11-23 09:30:54,510][views.py][addAuction][Line:1309][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1287, in addAuction
+    _auction[key] =  json.loads(data["value"])
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:31:23,556][views.py][addAuction][Line:1309][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1284, in addAuction
+    data = json.loads(request.POST.get(key, None))
+  File "C:\Python27\lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+
+[2018-11-23 09:34:28,812][views.py][addAuction][Line:1309][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1287, in addAuction
+    _auction[key] =  json.loads(data["value"])
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:35:01,323][views.py][addAuction][Line:1309][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1287, in addAuction
+    _auction[key] = data["value"]
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:36:21,203][views.py][addAuction][Line:1310][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1287, in addAuction
+    _auction[key] = data["value"]
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:36:54,101][views.py][addAuction][Line:1310][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1287, in addAuction
+    _auction[key] = data["value"]
+TypeError: 'int' object has no attribute '__getitem__'
+
+[2018-11-23 09:37:14,173][views.py][addAuction][Line:1310][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1284, in addAuction
+    data = json.loads(request.POST.get(key, None))
+  File "C:\Python27\lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+
+[2018-11-23 10:39:23,088][views.py][opDataView][Line:161][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 149, in opDataView
+    dataJson = json.loads(serializers.serialize("json", _auction))[0]
+IndexError: list index out of range
+
+[2018-11-23 10:42:33,104][views.py][opDataView][Line:162][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    dataJson = json.loads(serializers.serialize("json", _auction))[0]
+IndexError: list index out of range
+
+[2018-11-23 10:43:22,062][views.py][opDataView][Line:162][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 150, in opDataView
+    dataJson = json.loads(serializers.serialize("json", _auction))[0]
+IndexError: list index out of range
+
+[2018-11-23 10:44:44,921][views.py][opDataView][Line:147][ERROR]:list index out of range
+[2018-11-23 10:47:04,207][views.py][opDataView][Line:158][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 146, in opDataView
+    logger.error(e)
+NameError: global name 'e' is not defined
+
+[2018-11-23 14:00:49,295][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1348, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:06:10,407][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1349, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:07:38,428][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1349, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:11:00,135][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1350, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:11:27,108][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1350, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:12:45,921][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1351, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:13:19,632][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1350, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:14:28,404][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1350, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:15:22,990][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1350, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:16:49,546][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1351, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:17:03,362][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1351, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:17:23,351][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1351, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+
+[2018-11-23 14:17:46,907][views.py][auctionManage][Line:1258][DEBUG]:Traceback (most recent call last):
+  File "e:\web\datamanage\views.py", line 1255, in auctionManage
+    return (op in ["add", "edit"] and addAuction(request)) or (op == "get" and getAuction(request)) or (op == "delete" and delAuction(request))
+  File "e:\web\datamanage\views.py", line 1351, in delAuction
+    logger.dubug(traceback.format_exc())
+AttributeError: 'Logger' object has no attribute 'dubug'
+

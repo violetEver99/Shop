@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+<!-- {% block navi_left %} {{ left }} {% endblock %}
+{% block navi_top %} {{ top }} {% endblock %} -->
+<!-- {% block username %} Admin {% endblock %} -->
+
+{% block title %}
+物品详细信息
+{% endblock %}
+
+{% block extraJS %}
+
+                seajs.use(['auctionDetail'], function() {
+                });
+
+{% endblock %}
+
+{% block extraCSS %}
+.inline.fields .field:first-child label{
+        width: 100% !important;
+        text-align: right;
+        padding-right: 20px;
+}
+.inline.fields{
+        -webkit-align-items: flex-start !important;
+        -ms-flex-align: flex-start !important;
+        align-items: flex-start !important;
+}
+{% endblock %} 
+
+{% block content %}
+<input type="hidden" id="id" value={{ id }} />
+<input type="hidden" id="data" value='{{ data }}' />
+
+<div style="width: 80%;margin: 10px auto;max-width: 1000px;">
+        <div class="ui card" style="width: 100%">
+                <div class="content">
+                        <div class="header">
+                                <span>物品信息</span>
+                        </div>
+                </div>
+                <div class="content">
+                
+                        <div class="dataArea ui form">
+                                <div class="inline fields">
+                                        <div class="three wide field">
+                                                <label>名称</label>
+                                        </div>
+                                        <div class="thirteen wide field">
+                                                <span id="auctionname"></span>
+                                        </div>
+                                </div>
+                                <div class="inline fields">
+                                        <div class="three wide field">
+                                                <label>序号</label>
+                                        </div>
+                                        <div class="thirteen wide field">
+                                                <span id="auctionid"></span>
+                                        </div>
+                                </div>
+                                <div class="inline fields">
+                                        <div class="three wide field">
+                                                <label>价格</label>
+                                        </div>
+                                        <div class="thirteen wide field">
+                                                <span id="auctionprice"></span>
+                                        </div>
+                                </div>
+                                <div class="inline fields">
+                                        <div class="three wide field">
+                                                <label>数量</label>
+                                        </div>
+                                        <div class="thirteen wide field">
+                                                <span id="auctionnum"></span>
+                                        </div>
+                                </div>
+                                <div class="inline fields">
+                                        <div class="three wide field">
+                                                <label>描述</label>
+                                        </div>
+                                        <div class="thirteen wide field">
+                                                <span id="auctiondesc"></span>
+                                        </div>
+                                </div>
+                                
+                                
+                        </div>
+                </div>
+        </div>
+        
+        
+</div>
+
+{% endblock %}

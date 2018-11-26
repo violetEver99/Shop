@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+<!-- {% block navi_left %} {{ left }} {% endblock %}
+{% block navi_top %} {{ top }} {% endblock %} -->
+<!-- {% block username %} Admin {% endblock %} -->
+
+{% block title %}
+Semantic 导航模版
+{% endblock %}
+
+{% block extraJS %}
+
+		seajs.use('1', function() {
+		});
+
+{% endblock %}
+
+<!-- {% block extraCSS %}
+<link rel="stylesheet" type="text/css" class="ui" href="" />
+{% endblock %} -->
+
+{% block content %}
+测试页面，每个页面更新此content即可，左侧以及顶部导航已在base中实现，公共js、公共元素也可放到base中<br>
+<button class="mini ui button" id="btn1">Mini </button>
+<button class="tiny ui button" id="btn2">Tiny </button>
+<button class="small ui button">Small </button>
+<button class="medium ui button">Medium </button>
+<button class="large ui button">Large </button>
+<button class="big ui button">Big </button>
+<button class="huge ui button">Huge </button>
+<button class="massive ui button">Massive </button>
+
+ 
+
+{% endblock %}

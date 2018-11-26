@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+
+{% block title %}
+用户管理
+{% endblock %}
+
+{% block extraJS %}
+
+		seajs.use('usermanage', function() {
+		});
+
+{% endblock %}
+
+{% block extraCSS %}
+	#userPerms .folder.icon{
+		cursor:pointer;
+	}
+	
+	#permTab .tab{
+		max-height:450px;
+		min-height:280px;
+		overflow:auto;
+	}
+	.inline.fields .field:first-child label{
+		width: 100% !important;
+		text-align: right;
+		padding-right: 20px;
+	}
+	
+{% endblock %} 
+
+{% block content %}
+			<input  id="basegroupid" name="userid" type="text" value="{{basegroupid}}" style="display:none;">
+
+					<div id="contentTab" class="content" style="height:calc(100% - 45px);">
+						<div class="ui pointing secondary menu">
+							<a class="active item" data-tab="user">用户</a>
+							<a class="item" data-tab="group">角色</a>
+						</div>
+
+						
+						<div class="ui active tab" data-tab="user">
+							<table id="userDT" class="ui compact celled table" cellspacing="0" width="100%">
+
+							</table>
+							
+							<div class="ui small modal" id="addUser">
+								<div class="header">新建用户</div>
+								<div class="content">
+									<form class="ui form segment user">
+										<div class="two fields">
+											<div class="required field">
+												<label>用户名</label>
+												<input placeholder="用户名" id="newusername" name="username" type="text">
+											</div>
+											<div class="field">
+												<label>密码</label>
+												<input placeholder="密码" id="newpasswd" name="passwd" type="password">
+											</div>
+										</div>
+										<div class="two fields">
+											<div class="field">
+												<label>角色</label>
+												<div class="ui search selection dropdown group">
+													<input id="newrole" name="role" type="hidden">
+													<i class="dropdown icon"></i>
+													<div class="default text"></div>
+													<div class="menu">
+													</div>
+												</div>
+											</div>
+											<div class="field">
+												<label>部门</label>
+												<input placeholder="部门" id="newdepartment" name="department" type="text">
+											</div>
+										</div>
+										<div class="field">
+											<label>备注</label>
+											<textarea placeholder="备注" id="newinfo" name="info" rows="2" type="text" ></textarea>
+										</div>
+									   <div class="submit button hidden"></div>
+									</form>
+								</div>
+								<div class="actions">
+									<div class="ui approve button black">提交</div>
+									<div class="ui cancel button grey">取消</div>
+								</div>
+							</div>
+							<div class="ui small modal" id="editUser">
+								<div class="header">编辑用户</div>
+								<div class="content">
+									<form class="ui form segment user">
+										<div class="two fields">
+											<div class="required field">
+												<label>用户名</label>
+												<input placeholder="用户名" id="editusername" name="username" type="text">
+												<input  id="edituserid" name="userid" type="text" value="" style="display:none;">
+											</div>
+										</div>
+										<div class="two fields">
+											<div class="field">
+												<label>角色</label>
+												<div class="ui search selection dropdown group">
+													<input id="editrole" name="role" type="hidden">
+													<i class="dropdown icon"></i>
+													<div class="default text"></div>
+													<div class="menu">
+<!-- 														<div class="item" data-value="1">管理员</div>
+														<div class="item" data-value="0">普通用户</div> -->
+													</div>
+												</div>
+											</div>
+											<div class="field">
+												<label>部门</label>
+												<input placeholder="部门" id="editdepartment" name="department" type="text">
+											</div>
+										</div>
+										<div class="field">
+											<label>备注</label>
+											<textarea placeholder="备注" id="editinfo" name="info" rows="1" type="text" ></textarea>
+										</div>
+									   <div class="submit button hidden"></div>
+									</form>
+								</div>
+								<div class="actions">
+									<div class="ui button blue changepw">重置密码</div>
+									<div class="ui approve button black">提交</div>
+									<div class="ui cancel button grey">取消</div>
+								</div>
+							</div>
+							
+							<div class="ui small modal" id="addGroup">
+								<div class="header">新建角色</div>
+								<div class="content">
+									<form class="ui form segment group">
+										<div class="two fields">
+											<div class="required field">
+												<label>名称</label>
+												<input placeholder="角色名称" id="newgroupname" name="groupname" type="text">
+										
+											</div>
+
+											<div class="required field">
+												<label>归属地市</label>
+												<div class="ui selection dropdown">
+													<input type="hidden" id="city" name="city" value="">
+													<i class="dropdown icon"></i>
+													<div class="default text">请选择</div>
+													<div class="menu niceScroll">
+													{% if request.user.is_superuser %}
+														<div class="item" data-value="省厅">省厅</div>
+													{% endif %}
+														<div class="item" data-value="广州市">广州市</div>
+														<div class="item" data-value="深圳市">深圳市</div>
+														<div class="item" data-value="梅州市">梅州市</div>
+														<div class="item" data-value="潮州市">潮州市</div>
+														<div class="item" data-value="惠州市">惠州市</div>
+														<div class="item" data-value="汕尾市">汕尾市</div>
+														<div class="item" data-value="揭阳市">揭阳市</div>
+														<div class="item" data-value="汕头市">汕头市</div>
+														<div class="item" data-value="河源市">河源市</div>
+														<div class="item" data-value="东莞市">东莞市</div>
+														<div class="item" data-value="韶关市">韶关市</div>
+														<div class="item" data-value="清远市">清远市</div>
+														<div class="item" data-value="佛山市">佛山市</div>
+														<div class="item" data-value="中山市">中山市</div>
+														<div class="item" data-value="珠海市">珠海市</div>
+														<div class="item" data-value="肇庆市">肇庆市</div>
+														<div class="item" data-value="江门市">江门市</div>
+														<div class="item" data-value="云浮市">云浮市</div>
+														<div class="item" data-value="阳江市">阳江市</div>
+														<div class="item" data-value="湛江市">湛江市</div>
+														<div class="item" data-value="茂名市">茂名市</div>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="field">
+											<label>备注</label>
+											<textarea placeholder="备注" id="newgroupinfo" name="info" rows="1" type="text" ></textarea>
+										</div>
+									   <div class="submit button hidden"></div>
+									</form>
+								</div>
+								<div class="actions">
+									<div class="ui approve button black">提交</div>
+									<div class="ui cancel button grey">取消</div>
+								</div>
+							</div>
+							
+							<div class="ui small modal" id="editGroup">
+								<div class="header">编辑角色</div>
+								<div class="content">
+									<form class="ui form segment group">
+										<div class="two fields">
+											<div class="required field">
+												<label>名称</label>
+												<input placeholder="角色名称" id="editgroupname" name="groupname" type="text">
+												<input  id="editgroupid" name="id" type="text" value="" style="display:none;">
+											</div>
+
+											<div class="required field">
+												<label>归属地市</label>
+												<div class="ui selection dropdown">
+													<input type="hidden" id="city" name="city" value="">
+													<i class="dropdown icon"></i>
+													<div class="default text">请选择</div>
+													<div class="menu niceScroll">
+													{% if request.user.is_superuser %}
+														<div class="item" data-value="省厅">省厅</div>
+													{% endif %}
+														<div class="item" data-value="广州市">广州市</div>
+														<div class="item" data-value="深圳市">深圳市</div>
+														<div class="item" data-value="梅州市">梅州市</div>
+														<div class="item" data-value="潮州市">潮州市</div>
+														<div class="item" data-value="惠州市">惠州市</div>
+														<div class="item" data-value="汕尾市">汕尾市</div>
+														<div class="item" data-value="揭阳市">揭阳市</div>
+														<div class="item" data-value="汕头市">汕头市</div>
+														<div class="item" data-value="河源市">河源市</div>
+														<div class="item" data-value="东莞市">东莞市</div>
+														<div class="item" data-value="韶关市">韶关市</div>
+														<div class="item" data-value="清远市">清远市</div>
+														<div class="item" data-value="佛山市">佛山市</div>
+														<div class="item" data-value="中山市">中山市</div>
+														<div class="item" data-value="珠海市">珠海市</div>
+														<div class="item" data-value="肇庆市">肇庆市</div>
+														<div class="item" data-value="江门市">江门市</div>
+														<div class="item" data-value="云浮市">云浮市</div>
+														<div class="item" data-value="阳江市">阳江市</div>
+														<div class="item" data-value="湛江市">湛江市</div>
+														<div class="item" data-value="茂名市">茂名市</div>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="field">
+											<label>备注</label>
+											<textarea placeholder="备注" id="editgroupinfo" name="info" rows="1" type="text" ></textarea>
+										</div>
+									   <div class="submit button hidden"></div>
+									</form>
+								</div>
+								<div class="actions">
+									<div class="ui approve button black">提交</div>
+									<div class="ui cancel button grey">取消</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="ui tab" data-tab="group">
+							<table id="groupDT" class="ui compact celled table" cellspacing="0" width="100%">
+							</table>
+							
+							<div class="ui small modal" id="userPerms">
+							<!-- 	<div class="header">角色[]的权限分配</div> -->
+								<div  id="permTab" class="content">
+									<div class="ui pointing secondary menu">
+										<div class="ui grey label" style="position:absolute;top:1.7rem;right:1.5rem;"><span id="_user"></span> </div>
+										<a class="active item" data-tab="menu">菜单管理</a>
+
+									</div>
+									
+									<div class="ui active tab" data-tab="menu">
+										<div id="menutree" class="ztree"></div>
+									</div>
+									
+								</div>
+								<div class="actions">
+									<div class="ui approve button black">提交</div>
+									<div class="ui cancel button grey">关闭</div>
+								</div>
+							</div>							
+							
+						</div>
+					</div>
+<!-- 				</div>
+			</div> -->
+
+
+{% endblock %}

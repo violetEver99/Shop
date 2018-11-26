@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="utf-8" /> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" type="text/css" class="ui" href="/static/css/semantic.min.css" />
+		<title>练习系统</title>
+		<style>
+			body{
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				flex-direction: column;
+				background-color: #354350;
+			}
+			.titleDiv{
+				height: 4em;
+				width: 100%;
+				border-top: 1px solid;
+				display: flex;
+			}
+			.titleDiv .space{
+				height: 0px;
+				width: 20%;
+				border-right: 6em solid transparent;
+				border-top: 3em solid #000;
+				position: absolute;
+			}
+			.title{
+				align-self: center;
+				width: 100%;
+				text-align: center;
+			}
+			.title span{
+				font-size: 3em;
+				color: white;
+			}
+			.bottomDiv{
+				height: 3em;
+				width: 100%;
+				border-bottom: 1px solid;
+			}
+			.bottomDiv .space{
+				height: 0px;
+				width: 20%;
+				border-left: 6em solid transparent;
+				border-bottom: 3em solid #000;
+				float: right;
+			}
+			.loginDiv{
+				width: 330px;
+			}
+
+		</style>
+	</head> 
+
+	<body>
+		<div class="titleDiv">
+			<div class="space"></div>
+			<div class="title">
+				<span>系统</span>
+			</div>
+		</div>
+		<div class="loginDiv">
+			<div class="ui attached message" style="background: #242424;margin: 0px;display: flex;justify-content: center;">
+				<div class="ui header" style="color: #FFF">用户登录 </div>
+			</div>
+			<form class="ui large form" method="post" action="/login" style="margin-bottom: 0px;">
+				<div class="ui stacked segment attached fluid">
+					{% if loginfailed %}
+						<div class="ui error mini message" style="display:block">
+							{{loginfailed}}
+						</div>
+					{% endif %}
+
+
+					<div class="field" style="margin-top: 20px">
+						<div class="ui left icon input">
+							<i class="user icon"></i>
+							<input type="text" name="username" placeholder="" autofocus="autofocus">
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui left icon input">
+							<i class="lock icon"></i>
+							<input type="password" name="password" placeholder="">
+						</div>
+					</div>
+					<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+					<button class="ui fluid large invert submit button" type="submit">登录</button>
+
+				</div>
+
+				<div class="ui error message"></div>
+
+			</form>
+			<div class="ui bottom attached message" style="text-align:right;background: #FFF;">
+				<a href="#">用户使用手册</a>
+				<a href="#">系统说明</a>
+			</div>
+
+		</div>
+		<div class="bottomDiv">
+			<div class="space"></div>
+		</div>
+
+		<script src="/static/js/origin/jquery.min.js"></script>
+		<script src="/static/js/origin/semantic.min.js"></script>
+	</body>
+	
+	
+	<script type="text/javascript">
+
+
+	</script>
+</html>
